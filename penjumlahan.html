@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codelab 2, Penjumlahan</title>
+  </head>
+  <body>
+    <h1>PENJUMLAHAN BILANGAN</h1>
+    <label form="nama" style="margin-right: 20px">Bilangan Pertama :</label>
+    <input type="text" id="bil1" />
+    <label form="nama" style="margin-right: 20px">Bilangan Kedua : </label>
+    <input type="text" id="bil2" />
+    <br />
+    <button onclick="penjumlahan()">Jumlahkan</button>
+    <button onclick="mengulang()">Ulang</button>
+
+    <script>
+      function penjumlahan() {
+        // Mengambil nilai dari input
+        var angka1 = parseFloat(document.getElementById("bil1").value);
+        var angka2 = parseFloat(document.getElementById("bil2").value);
+
+        // Melakukan penjumlahan
+        var hasil = angka1 + angka2;
+
+        // Menampilkan hasil
+        window.alert("Hasil Penjumlahan = " + hasil);
+      }
+
+      function mengulang() {
+        document.getElementById("bil1").value = "";
+        document.getElementById("bil2").value = "";
+      }
+    </script>
+  </body>
+</html>
